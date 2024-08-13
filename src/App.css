@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #1f2d3d46;
+  border-radius: 30px;
+}
+
+/* 초기화면-Box */
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: calc(100vh - 18.75rem);
+  height: 415px;
+
+  text-align: center;
+  padding: 20px;
+  max-width: 350px;
+  color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.774);
+  border-radius: 30px;
+  margin: 0 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main:first-child {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.main:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+.box h1 {
+  color: black;
+  font-weight: 300;
+}
+
+.box h2 {
+  font-weight: 300;
+} 
+
+button {
+  flex-shrink: 0;
+  width: 100px;
+  height: 40px;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #825af07e;
+  border-radius: 0.6em;
+  color: #91b8f3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-color: #825af07e;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #642ff73f inset, 0 0 0 0 #5834db;
+  transition: all 150ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 10px 0 #825af07e inset, 0 0 10px 4px #825af07e;
+  }
+}
+
+.Win {
+  border: 2px solid green;
+  color: green;
+}
+
+.Lose {
+  border: 2px solid red;
+  color: red;
+}
+
+.Tie {
+  border: 2px solid black;
+  color: black;
+}
+
+.icon {
+  color: rgb(69, 8, 211);
+  font-size: 25px;
+  margin: 10px;
+}
+
+/* 작은 화면 (최대 768px) */
+@media (max-width: 768px) {
+    .container {
+      margin: 0;
+    }
+
+    .box {
+      width: calc(100vh - 8.75rem);
+      height: 310px;
+    }
+
+    .main:first-child {
+      font-size: 25px;
+      font-weight: 800;
+      white-space: nowrap;
+      margin-bottom: 50px;
+    }
+
+    .main{
+      opacity: 1;
+      width: 140px;
+      transition: opacity 0.5s ease, height 0.5s ease;
+    }
+
+    .item-img {
+     width: 120px;
+    }
+
+    .main:nth-child(2) {
+      margin-bottom: 40px;
+    }
+
+    .box h1 {
+      font-size: 25px;
+    }
+
+    button {
+      width: 80px;
+    }
+}
