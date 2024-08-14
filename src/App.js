@@ -39,7 +39,7 @@ export default class AppClass extends Component {
 
   // 유저 아이템 선택 시작 // 사용자, 컴퓨터 선택 기능 구현
   play = (userChoice) => {
-    let computerChoice = this.randomChoice();
+    const computerChoice = this.randomChoice();
     this.setState({
       userSelect: choice[userChoice],
       computerSelect: computerChoice,
@@ -49,9 +49,9 @@ export default class AppClass extends Component {
 
   // 컴퓨터 아이템 선택 시작
   randomChoice = () => {
-    let itemArray = Object.keys(choice); //객체에 키값만 뽑아서 어레이로 만들어주는 함수
-    let randomItem = Math.floor(Math.random() * itemArray.length);
-    let final = itemArray[randomItem];
+    const itemArray = Object.keys(choice); //객체에 키값만 뽑아서 어레이로 만들어주는 함수
+    const randomItem = Math.floor(Math.random() * itemArray.length);
+    const final = itemArray[randomItem];
     return choice[final];
   };
 
